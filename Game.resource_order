@@ -1,0 +1,12 @@
+{
+  "FolderOrderSettings":[
+    {"name":"bodies","order":5,"path":"folders/bodies.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"obj_Asteroid","order":2,"path":"objects/obj_Asteroid/obj_Asteroid.yy",},
+    {"name":"obj_Body","order":3,"path":"objects/obj_Body/obj_Body.yy",},
+    {"name":"obj_GravityWorld","order":4,"path":"objects/obj_GravityWorld/obj_GravityWorld.yy",},
+    {"name":"obj_Planet","order":1,"path":"objects/obj_Planet/obj_Planet.yy",},
+    {"name":"obj_System","order":6,"path":"objects/obj_System/obj_System.yy",},
+  ],
+}
