@@ -24,7 +24,7 @@ var v = sqrt(global.BH_G * star.mass / r);
 
 with (planet) {
     phy_speed_x = 0;
-    phy_speed_y = v * global.PTM;
+    phy_speed_y = -v * global.PTM;
 }
 
 // пояс астероидов
