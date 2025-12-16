@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"update_fire",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"update_fire",
+  "parent":{
+    "name":"Game",
+    "path":"Game.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

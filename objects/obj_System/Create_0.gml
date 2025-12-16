@@ -13,18 +13,23 @@ var cy = y;
 var star = instance_create_layer(cx, cy, "Instances", obj_Star);
 
 // планета на орбите
-var r = 200;
+var r = 300;
 var px = cx + r;
 var py = cy;
 
-var planet = instance_create_layer(px, py, "Instances", obj_Planet);
+var player = instance_create_layer(px, py, "Instances", obj_Player_planet);
+var enemy = instance_create_layer(cx - r, py, "Instances", obj_Enemy_planet);
 
 // круговая скорость (как раньше, px/step)
 var v = sqrt(global.BH_G * star.mass / r);
-
-with (planet) {
+with (player) {
     phy_speed_x = 0;
     phy_speed_y = -v * global.PTM;
+}
+
+with (enemy) {
+    phy_speed_x = 0;
+    phy_speed_y = v * global.PTM;
 }
 
 // пояс астероидов

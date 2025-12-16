@@ -1,6 +1,6 @@
 /// obj_Star: Create
-mass = 20000.0;
-diameter = 24.0;
+mass = 200000.0;
+diameter = 100.0;
 event_inherited();
 
 

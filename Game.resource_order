@@ -1,12 +1,19 @@
 {
   "FolderOrderSettings":[
-    {"name":"bodies","order":5,"path":"folders/bodies.yy",},
+    {"name":"bodies","order":3,"path":"folders/bodies.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"obj_Asteroid","order":2,"path":"objects/obj_Asteroid/obj_Asteroid.yy",},
-    {"name":"obj_Body","order":3,"path":"objects/obj_Body/obj_Body.yy",},
-    {"name":"obj_GravityWorld","order":4,"path":"objects/obj_GravityWorld/obj_GravityWorld.yy",},
-    {"name":"obj_Planet","order":1,"path":"objects/obj_Planet/obj_Planet.yy",},
-    {"name":"obj_System","order":6,"path":"objects/obj_System/obj_System.yy",},
+    {"name":"obj_Body","order":1,"path":"objects/obj_Body/obj_Body.yy",},
+    {"name":"obj_Boom","order":9,"path":"objects/obj_Boom/obj_Boom.yy",},
+    {"name":"obj_Enemy_planet","order":3,"path":"objects/obj_Enemy_planet/obj_Enemy_planet.yy",},
+    {"name":"obj_explosion","order":6,"path":"objects/obj_explosion/obj_explosion.yy",},
+    {"name":"obj_GravityWorld","order":2,"path":"objects/obj_GravityWorld/obj_GravityWorld.yy",},
+    {"name":"obj_Gun","order":5,"path":"objects/obj_Gun/obj_Gun.yy",},
+    {"name":"obj_Player_planet","order":1,"path":"objects/obj_Player_planet/obj_Player_planet.yy",},
+    {"name":"obj_Rocket","order":10,"path":"objects/obj_Rocket/obj_Rocket.yy",},
+    {"name":"obj_System","order":4,"path":"objects/obj_System/obj_System.yy",},
+    {"name":"update_fire","order":7,"path":"scripts/update_fire/update_fire.yy",},
+    {"name":"spr_fire","order":8,"path":"sprites/spr_fire/spr_fire.yy",},
   ],
 }

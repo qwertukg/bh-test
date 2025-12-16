@@ -153,7 +153,9 @@ bh_apply = function(node, bid) {
 
 
 
-
+window_set_cursor(cr_cross)
+window_set_fullscreen(false)
+game_set_speed(60, gamespeed_fps)
 
 // 1/32 = 32 пикселя считаются за 1 метр (рекомендованный пример из мануала).
 physics_world_create(global.PTM); // (pixeltometrescale) :contentReference[oaicite:0]{index=0}
