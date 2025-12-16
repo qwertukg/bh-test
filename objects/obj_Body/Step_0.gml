@@ -3,4 +3,4 @@ if (fixed) {
     exit;
 }
 
-physics_apply_force(fx, fy);
+physics_apply_force(x, y, fx, fy);
