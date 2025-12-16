@@ -19,11 +19,12 @@ var py = cy;
 
 var planet = instance_create_layer(px, py, "Instances", obj_Planet);
 
-// круговая скорость
+// круговая скорость (как раньше, px/step)
 var v = sqrt(global.BH_G * star.mass / r);
+
 with (planet) {
-    phy_linear_velocity_x = 0;
-    phy_linear_velocity_y = v;
+    phy_speed_x = 0;
+    phy_speed_y = v * global.PTM;
 }
 
 // пояс астероидов
@@ -37,9 +38,9 @@ for (var i = 0; i < count; i++) {
 
     var a = instance_create_layer(ax, ay, "Instances", obj_Asteroid);
 
-    var vv = sqrt(global.BH_G * star.mass / rr);
-    with (a) {
-        phy_linear_velocity_x = -sin(ang) * vv + random_range(-0.2, 0.2);
-        phy_linear_velocity_y =  cos(ang) * vv + random_range(-0.2, 0.2);
-    }
+	var vv = sqrt(global.BH_G * star.mass / rr);
+	with (a) {
+	    phy_speed_x = (-sin(ang) * vv + random_range(-0.2, 0.2)) * global.PTM
+	    phy_speed_y =  (cos(ang) * vv + random_range(-0.2, 0.2)) * global.PTM
+	}
 }

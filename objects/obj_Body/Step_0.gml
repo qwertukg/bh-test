@@ -2,9 +2,12 @@
 
 var dt = global.BH_DT;
 
-// Импульс J = F * dt  (эквивалент твоему dv = (F/m)*dt)
-physics_apply_impulse(x, y, fx * dt, fy * dt);
+var ax = fx / mass;
+var ay = fy / mass;
 
-// обнуляем аккумуляторы сил на следующий шаг
-fx = 0.0;
-fy = 0.0;
+// то же самое, что было с vx/vy, но в physics-скорость (px/step)
+phy_speed_x += ax * dt;
+phy_speed_y += ay * dt;
+
+fx = 0;
+fy = 0;
