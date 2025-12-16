@@ -1,13 +1,10 @@
-if (fixed) exit;
+/// obj_Body: Step (physics)
 
 var dt = global.BH_DT;
 
-var ax = fx / mass;
-var ay = fy / mass;
+// Импульс J = F * dt  (эквивалент твоему dv = (F/m)*dt)
+physics_apply_impulse(x, y, fx * dt, fy * dt);
 
-// semi-implicit Euler
-vx += ax * dt;
-vy += ay * dt;
-
-x += vx * dt;
-y += vy * dt;
+// обнуляем аккумуляторы сил на следующий шаг
+fx = 0.0;
+fy = 0.0;

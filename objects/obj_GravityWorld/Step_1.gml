@@ -1,3 +1,5 @@
+// obj_GravityWorld: Begin Step
+
 // собрать все тела (все наследники obj_Body)
 var n = instance_number(obj_Body);
 if (n <= 0) exit;

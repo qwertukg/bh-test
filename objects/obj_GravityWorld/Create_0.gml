@@ -3,7 +3,7 @@
 // параметры
 global.BH_G     = 0.4;
 global.BH_THETA = 0.7;
-global.BH_DT    = 1.0;
+global.BH_DT    = 0.1;
 global.BH_SOFT  = 4.0;
 
 // границы дерева (под комнату)
@@ -149,3 +149,13 @@ bh_apply = function(node, bid) {
         bh_apply(node.child[3], bid);
     }
 };
+
+
+
+
+
+// 1/32 = 32 пикселя считаются за 1 метр (рекомендованный пример из мануала).
+physics_world_create(1/32); // (pixeltometrescale) :contentReference[oaicite:0]{index=0}
+
+// Гравитация (в метрах/сек^2). Можно поставить (0,0) если “космос”.
+physics_world_gravity(0, 0); // (xg, yg) :contentReference[oaicite:1]{index=1}

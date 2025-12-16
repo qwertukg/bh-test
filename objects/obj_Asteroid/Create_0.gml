@@ -1,5 +1,6 @@
-event_inherited();
+// obj_Asteroid: Create
+
 
 mass = 0.05;
 diameter = 3.0;
-fixed = false;
+event_inherited();

@@ -1,3 +1,5 @@
+/// obj_System: Create
+
 // гарантируем мир гравитации
 if (!instance_exists(obj_GravityWorld)) {
     instance_create_layer(0, 0, "Instances", obj_GravityWorld);
@@ -19,8 +21,10 @@ var planet = instance_create_layer(px, py, "Instances", obj_Planet);
 
 // круговая скорость
 var v = sqrt(global.BH_G * star.mass / r);
-planet.vx = 0;
-planet.vy = v;
+with (planet) {
+    phy_linear_velocity_x = 0;
+    phy_linear_velocity_y = v;
+}
 
 // пояс астероидов
 var count = 100;
@@ -34,6 +38,8 @@ for (var i = 0; i < count; i++) {
     var a = instance_create_layer(ax, ay, "Instances", obj_Asteroid);
 
     var vv = sqrt(global.BH_G * star.mass / rr);
-    a.vx = -sin(ang) * vv + random_range(-0.2, 0.2);
-    a.vy =  cos(ang) * vv + random_range(-0.2, 0.2);
+    with (a) {
+        phy_linear_velocity_x = -sin(ang) * vv + random_range(-0.2, 0.2);
+        phy_linear_velocity_y =  cos(ang) * vv + random_range(-0.2, 0.2);
+    }
 }
