@@ -1,5 +1,5 @@
-event_inherited();
-
-mass = 0.05;
 diameter = 3.0;
+mass = 0.05;
 fixed = false;
+
+event_inherited();

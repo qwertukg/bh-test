@@ -1,13 +1,14 @@
-mass = 1.0;
-diameter = 4.0;
+// значения по умолчанию, если не переопределены до event_inherited()
+if (!variable_instance_exists("mass"))     mass = 1.0;
+if (!variable_instance_exists("diameter")) diameter = 4.0;
 
-vx = 0.0;
-vy = 0.0;
+if (!variable_instance_exists("vx")) vx = 0.0;
+if (!variable_instance_exists("vy")) vy = 0.0;
 
-fx = 0.0;
-fy = 0.0;
+if (!variable_instance_exists("fx")) fx = 0.0;
+if (!variable_instance_exists("fy")) fy = 0.0;
 
-fixed = false; // звезда будет fixed=true
+if (!variable_instance_exists("fixed")) fixed = false; // звезда будет fixed=true
 
 // ---- физическая фикстура ----
 var radius = diameter * 0.5;
