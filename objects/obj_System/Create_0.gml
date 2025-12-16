@@ -21,6 +21,7 @@ var planet = instance_create_layer(px, py, "Instances", obj_Planet);
 var v = sqrt(global.BH_G * star.mass / r);
 planet.vx = 0;
 planet.vy = v;
+with (planet) physics_set_linear_velocity(0, v);
 
 // пояс астероидов
 var count = 100;
@@ -34,6 +35,9 @@ for (var i = 0; i < count; i++) {
     var a = instance_create_layer(ax, ay, "Instances", obj_Asteroid);
 
     var vv = sqrt(global.BH_G * star.mass / rr);
-    a.vx = -sin(ang) * vv + random_range(-0.2, 0.2);
-    a.vy =  cos(ang) * vv + random_range(-0.2, 0.2);
+    var velx = -sin(ang) * vv + random_range(-0.2, 0.2);
+    var vely =  cos(ang) * vv + random_range(-0.2, 0.2);
+    a.vx = velx;
+    a.vy = vely;
+    with (a) physics_set_linear_velocity(velx, vely);
 }
